@@ -53,7 +53,7 @@ public class biblioteca {
     }
     public void mostrarLibros(){
         for (int i = 0; i < libros.size(); i++) {
-            System.out.println("");
+            System.out.println("Libro "+i+": ISBN: "+getI);
             
         }
     }
