@@ -51,11 +51,37 @@ public class biblioteca {
     public void removeLibro(sala s){
         libros.remove(s);
     }
+    //funcion para mostrar libros
     public void mostrarLibros(){
+        //variable temporal para guardar un libro
+        libro libro1;
+        //bucle que se ejecutara dependiendo del numero de libros que haya
         for (int i = 0; i < libros.size(); i++) {
-            System.out.println("");
+            //establecer la variable libro1 con el libro en posicion i
+            libro1=libros.get(i);
+            //mostrar por pantalla el numero de libro, el nombre, el autor y el ISBN
+            System.out.println(i+1+". Nombre: "+libro1.getNombre()+" Autor: "+libro1.getAutor()+" ISBN: "+libro1.getISBN());
             
         }
     }
-
+    //funcion para mostrar salas
+    public void mostrarSalas(){
+        //variable temporal para guardar un salas
+        sala sala;
+        //bucle que se ejecutara dependiendo del numero de salas que haya
+        for (int i = 0; i < libros.size(); i++) {
+            //establecer la variable sala con la sala en posicion i
+            sala=salas.get(i);
+            //mostrar por pantalla el indice, numero de sala y las plazas
+            System.out.println(i+1+". Numero: "+sala.getNumero()+" Plazas: "+sala.getPlazas());
+            
+        }
+    }
+    public libro buscarLibroPorTitulo(String titulo){
+        for (libro libro1 : libros) {
+            if(libro1.getNombre().equals(titulo))
+            return libro1;
+        }
+        return null;
+    }
 }
