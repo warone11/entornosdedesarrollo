@@ -42,8 +42,8 @@ public class biblioteca {
     public void addLibro( libro l){
      libros.add(l);
     }
-    public void addSala( sala s){
-        salas.add(s);
+    public void addSala( sala sala){
+        salas.add(sala);
     }
     public void removeLibro(libro l){
         libros.remove(l);
@@ -57,14 +57,9 @@ public class biblioteca {
         libro libro1;
         //bucle que se ejecutara dependiendo del numero de libros que haya
         for (int i = 0; i < libros.size(); i++) {
-<<<<<<< HEAD
             //establecer la variable libro1 con el libro en posicion i
             libro1=libros.get(i);
-            //mostrar por pantalla el numero de libro, el nombre, el autor y el ISBN
-            System.out.println(i+1+". Nombre: "+libro1.getNombre()+" Autor: "+libro1.getAutor()+" ISBN: "+libro1.getISBN());
-=======
-            System.out.println("Libro "+i+": ISBN: "+getI);
->>>>>>> 6bfd0022ee3b76b1ff385d2a1e038f24644695fb
+            libro1.informacion(i+1);
             
         }
     }
@@ -73,19 +68,49 @@ public class biblioteca {
         //variable temporal para guardar un salas
         sala sala;
         //bucle que se ejecutara dependiendo del numero de salas que haya
-        for (int i = 0; i < libros.size(); i++) {
+        for (int i = 0; i < salas.size(); i++) {
             //establecer la variable sala con la sala en posicion i
             sala=salas.get(i);
-            //mostrar por pantalla el indice, numero de sala y las plazas
-            System.out.println(i+1+". Numero: "+sala.getNumero()+" Plazas: "+sala.getPlazas());
-            
+            //mostrar por pantalla
+            sala.informacion(i+1);
+            System.out.println("La sala tiene "+sala.getPersonaSize()+" personas");
+        }
+    }
+    public void mostrarSalasVacias(){
+        sala sala;
+        int j=1;
+        for(int i= 0; i<salas.size();i++){
+            sala=salas.get(i);
+            if(sala.getPersonaSize()==0){
+            sala.informacion(j);
+            j++;
+            }
+        }
+    }
+    public void mostrarSalasDisponibles(){
+        sala sala;
+        int j=1;
+        for(int i= 0; i<salas.size();i++){
+            sala=salas.get(i);
+            if(sala.isDisponible()){
+            sala.informacion(j);
+            j++;
+            }
         }
     }
     public libro buscarLibroPorTitulo(String titulo){
-        for (libro libro1 : libros) {
-            if(libro1.getNombre().equals(titulo))
+        for (libro libro1 : this.libros) {
+            if(libro1.getTitulo().equals(titulo))
             return libro1;
         }
         return null;
     }
+    public int personasTotales(){
+        int persona=0;
+        for (sala sala : this.salas) {
+            persona+=sala.getPersonaSize();
+        }
+        return persona;
+    }
+
 }
