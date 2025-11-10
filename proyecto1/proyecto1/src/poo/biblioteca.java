@@ -57,10 +57,14 @@ public class biblioteca {
         libro libro1;
         //bucle que se ejecutara dependiendo del numero de libros que haya
         for (int i = 0; i < libros.size(); i++) {
+<<<<<<< HEAD
             //establecer la variable libro1 con el libro en posicion i
             libro1=libros.get(i);
             //mostrar por pantalla el numero de libro, el nombre, el autor y el ISBN
             System.out.println(i+1+". Nombre: "+libro1.getNombre()+" Autor: "+libro1.getAutor()+" ISBN: "+libro1.getISBN());
+=======
+            System.out.println("Libro "+i+": ISBN: "+getI);
+>>>>>>> 6bfd0022ee3b76b1ff385d2a1e038f24644695fb
             
         }
     }

@@ -4,6 +4,7 @@ public class libro {
     private String ISBN;
     private String Nombre;
     private String Autor;
+<<<<<<< HEAD
     public libro(){
         this.ISBN="";
         this.Nombre="";
@@ -35,4 +36,9 @@ public class libro {
         this.Nombre = Nombre;
     }
     
+=======
+    public libro( String ISBN, String Nombre, String Autor){
+        
+    }
+>>>>>>> 6bfd0022ee3b76b1ff385d2a1e038f24644695fb
 }
