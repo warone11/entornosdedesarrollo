@@ -87,20 +87,10 @@ public class biblioteca {
             }
         }
     }
-    public void mostrarSalasDisponibles(){
-        sala sala;
-        int j=1;
-        for(int i= 0; i<salas.size();i++){
-            sala=salas.get(i);
-            if(sala.isDisponible()){
-            sala.informacion(j);
-            j++;
-            }
-        }
-    }
+    
     public libro buscarLibroPorTitulo(String titulo){
         for (libro libro1 : this.libros) {
-            if(libro1.getTitulo().equals(titulo))
+            if(libro1.getTitulo().equalsIgnoreCase(titulo))
             return libro1;
         }
         return null;

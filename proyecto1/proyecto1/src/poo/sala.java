@@ -69,6 +69,7 @@ public class sala {
         int i=1;
         for(Persona persona:Personas){
             System.out.println(i+" Nombre: "+persona.getNombre()+" Apellidos: "+persona.getApellidos()+" Edad: "+persona.getEdad()+" Email: "+persona.getEmail());
+            i++;
         }
     }
 
