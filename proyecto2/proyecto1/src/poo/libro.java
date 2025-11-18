@@ -87,6 +87,6 @@ public class libro {
         }
     }
     public void informacion(int numero){
-        System.out.println("Libro"+numero+": "+getTitulo()+" - "+getEditorial()+" - "+getEditorial()+" ("+getAnyo()+"). "+getIdioma()+", "+getNumDePaginas()+". "+estaDisponibletxt());
+        System.out.println("Libro "+(numero+1)+": "+getTitulo()+" - "+getEditorial()+" - "+getEditorial()+" ("+getAnyo()+"). "+getIdioma()+". "+estaDisponibletxt());
     }
 }

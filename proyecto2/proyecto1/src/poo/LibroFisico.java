@@ -8,4 +8,20 @@ public class LibroFisico extends libro {
         this.NumDePaginas=NumDePaginas;
         this.ubicacion=ubicacion;
     }
+
+    @Override
+    public void informacion(int numero) {
+        super.informacion(numero);
+        System.out.println("Numero de paginas: "+this.NumDePaginas+", ubicacion: "+this.ubicacion);
+    }
+    public int getNumDePaginas() {
+        return this.NumDePaginas;
+    }
+    
+    public String getUbicacion() {
+        return this.ubicacion;
+    }
+
+    
+    
 }

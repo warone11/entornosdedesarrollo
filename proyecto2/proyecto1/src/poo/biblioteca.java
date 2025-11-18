@@ -10,6 +10,7 @@ public class biblioteca {
     private int horaCierre;
     private List<libro> libros;
     private List<sala> salas;
+    private List<Persona> personas;
     public biblioteca(String nombre, String direccion, int horaApertura, int horaCierre){
         this.nombre=nombre;
         this.direccion=direccion;
@@ -101,6 +102,18 @@ public class biblioteca {
             persona+=sala.getPersonaSize();
         }
         return persona;
+    }
+    public void registrarVisita(Persona p) {
+        System.out.println(p.getNombre() + " ha visitado la biblioteca");
+    }
+    public void asignarResponsable(Persona p, sala s){
+        s.asignarResponsable(p);
+    }
+    public void mostrarInformacion(){
+        System.out.println("La biblioteca "+this.nombre+" esta en "+this.direccion+", esta abierta entre"+this.horaApertura+" y "+this.horaCierre+" este es el listado de libros:");
+        mostrarLibros();
+        System.out.println("y las salas");
+        mostrarSalas();
     }
 
 }

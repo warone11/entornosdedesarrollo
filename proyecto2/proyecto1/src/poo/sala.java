@@ -9,6 +9,7 @@ public class sala {
     private String Tipo;
     private boolean Disponible;
     private List<Persona> Personas;
+    private Persona responsable;
     public sala(String Nombre, int Capacidad, boolean Pizarra, String Tipo, boolean Disponible){
         this.Nombre=Nombre;
         this.Capacidad=Capacidad;
@@ -65,6 +66,9 @@ public class sala {
         else
         System.out.println("La sala ya esta vacia");
     }
+    public void asignarResponsable(Persona p) {
+        this.responsable = p;
+    }
     public void mostrarPersonas(){
         int i=1;
         for(Persona persona:Personas){
@@ -102,6 +106,7 @@ public class sala {
         return "no tiene pizarra";
     }
     public void informacion(int numero){
-        System.out.println("Sala "+numero+": "+getNombre()+" - "+getCapacidad()+". Se utiliza para "+getTipo()+", "+tienePizarratxt()+" y "+estaDisponibletxt());
+        System.out.println("Sala "+numero+": "+getNombre()+" - "+getCapacidad()+". Se utiliza para "+getTipo()+", "+tienePizarratxt()+" y "+estaDisponibletxt()+". Su responsable es: ");
+        responsable.mostrarInformacion();
     }
 }

@@ -8,4 +8,16 @@ public class LibroDigital extends libro {
         this.TamanoMB=TamanoMB;
         this.formato=formato;
     }
+    @Override
+    public void informacion(int numero) {
+        super.informacion(numero);
+        System.out.println("Tamaño archivo: "+this.TamanoMB+"MB, formato: "+this.formato);
+    }
+
+    public int getTamanoMB() {
+        return this.TamanoMB;
+    }
+    public String getFormato() {
+        return this.formato;
+    }
 }

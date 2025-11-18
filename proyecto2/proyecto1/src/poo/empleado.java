@@ -8,4 +8,10 @@ public class empleado extends Persona {
         this.puesto=puesto;
         this.sueldo=sueldo;
         }    
+    @Override
+    public void mostrarInformacion(){
+        super.mostrarInformacion();
+        System.out.println("Puesto: "+this.puesto+"Sueldo: "+this.sueldo);
+
+    }
 }

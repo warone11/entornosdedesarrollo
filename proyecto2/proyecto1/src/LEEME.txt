@@ -1,0 +1,14 @@
+aqui estan los ejercicios teoricos de la practica 5
+¿Qué tipo de relación hay entre Biblioteca y Sala? ¿Por qué?
+Es de composición, porque salas depende de bibilioteca para existir.
+b. ¿Qué pasaría con las salas si se destruye la biblioteca?
+Se eliminarian
+c. ¿En qué se diferencia la agregación de la composición en tu código?
+En que la composicion tiene un listado de objetos independientes y la agregación es una relacion floja entre dos objetos
+d. ¿Por qué tiene sentido que LibroDigital y LibroFisico hereden de
+Libro?
+porque son un tipo de libro
+e. ¿Qué ventaja ofrece la herencia al definir distintos tipos de personas?
+porque permite tener atributos unicamente para el tipo que sea
+f. ¿Dónde usarías @Override en tu implementación?
+Para poder añadir propiedades extra a las funciones de la clase de la que hereda los atributos
