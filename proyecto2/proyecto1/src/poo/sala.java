@@ -8,15 +8,15 @@ public class sala {
     private boolean Pizarra;
     private String Tipo;
     private boolean Disponible;
-    private List<Persona> Personas;
-    private Persona responsable;
+    private List<persona> Personas;
+    private persona responsable;
     public sala(String Nombre, int Capacidad, boolean Pizarra, String Tipo, boolean Disponible){
         this.Nombre=Nombre;
         this.Capacidad=Capacidad;
         this.Pizarra=Pizarra;
         this.Tipo=Tipo;
         this.Disponible=Disponible;
-        this.Personas= new ArrayList<Persona>();
+        this.Personas= new ArrayList<persona>();
         
     }
 
@@ -54,24 +54,24 @@ public class sala {
     public void setCapacidad(int Capacidad) {
         this.Capacidad = Capacidad;
     }
-    public void entrarPersona(Persona persona){
+    public void entrarPersona(persona persona){
         if(Personas.size()<this.Capacidad)
         Personas.add(persona);
         else
         System.out.println("Sala llena");
     }
-    public void salirPersona(Persona persona){
+    public void salirPersona(persona persona){
         if(!Personas.isEmpty())
             Personas.remove(persona);
         else
         System.out.println("La sala ya esta vacia");
     }
-    public void asignarResponsable(Persona p) {
+    public void asignarResponsable(persona p) {
         this.responsable = p;
     }
     public void mostrarPersonas(){
         int i=1;
-        for(Persona persona:Personas){
+        for(persona persona:Personas){
             System.out.println(i+" Nombre: "+persona.getNombre()+" Apellidos: "+persona.getApellidos()+" Edad: "+persona.getEdad()+" Email: "+persona.getEmail());
             i++;
         }

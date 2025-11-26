@@ -1,0 +1,73 @@
+@startuml
+skinparam classAttributeIconSize 0
+hide circle
+
+class producto{
+    -nombre: String
+    -precio: Double
+    --
+    -producto(Nombre: String , Precio: Double)
+    +calcularPrecioFinal(): Double
+    +toString(): String
+    +getNombre(): String
+    +setNombre(Nombre: String)
+    +getPrecio(): Double 
+    +setPrecio(Precio: Double)
+
+}
+
+class productoFisico{
+    - costeEnvio: Double
+    --
+    +productoFisico(Nombre: String , Precio: Double, costeEnvio: Double)
+    +getCosteEnvio(): Double 
+    +setCosteEnvio(CosteEnvio: Double)
+    
+}
+
+class productoDigital{
+    - tamanyoDescarga: Double
+    - licencia: String
+    --
+    +productoDigital(Nombre: String , Precio: Double, tamanyoDescarga: Double, licencia: String)
+    +getTamanyoDescarga(): Double 
+    +setTamanyoDescarga(tamanyoDescarga: Double)
+    +getLicencia(): String
+    +setLicencia(Licencia: String)
+}
+
+class cliente{
+    - nombre:String
+    - correo: String
+    - telefono: String
+    --
+    +cliente(nombre:String, correo: String, telefono: String)
+    +getNombre(): String
+    +setNombre(nombre: String)
+    +getCorreo(): String
+    +setCorreo(correo: String)
+    +getTelefono(): String
+    +setTelefono(telefono: String)
+}
+
+class pedido{
+    -productos: List<producto>
+    -cliente: cliente
+    --
+    +pedido(cliente: cliente)
+    +agregarProducto(p: producto)
+    +calcularTotal(): Double
+}
+
+class main{
+    +main(args: String[])
+}
+
+productoFisico--|>producto
+productoDigital--|>producto
+pedido..>cliente
+pedido o-- producto
+
+@enduml
+
+

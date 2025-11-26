@@ -1,7 +1,7 @@
 package poo;
 import java.util.ArrayList;
 import java.util.List;
-public class usuario extends Persona {
+public class usuario extends persona {
     private List<libro> listaLibrosPrestados;
     private int Socio;
     public usuario(String nombre, int edad, String direccion, String apellidos, String DNI, String email, String telefono, String profesion, int AnosExperiencia, int Socio){

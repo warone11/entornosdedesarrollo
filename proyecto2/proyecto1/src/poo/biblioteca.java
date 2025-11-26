@@ -10,7 +10,7 @@ public class biblioteca {
     private int horaCierre;
     private List<libro> libros;
     private List<sala> salas;
-    private List<Persona> personas;
+    private List<persona> personas;
     public biblioteca(String nombre, String direccion, int horaApertura, int horaCierre){
         this.nombre=nombre;
         this.direccion=direccion;
@@ -103,10 +103,10 @@ public class biblioteca {
         }
         return persona;
     }
-    public void registrarVisita(Persona p) {
+    public void registrarVisita(persona p) {
         System.out.println(p.getNombre() + " ha visitado la biblioteca");
     }
-    public void asignarResponsable(Persona p, sala s){
+    public void asignarResponsable(persona p, sala s){
         s.asignarResponsable(p);
     }
     public void mostrarInformacion(){

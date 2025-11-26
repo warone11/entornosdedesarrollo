@@ -16,8 +16,10 @@ public class salaLectura extends sala{
         }
 
     }
+    
     public void addLibro(libro l){
         listaLibros.add(l);
+        this.getTipo().has
     }
     public void removeLibro(libro l){
         listaLibros.remove(l);

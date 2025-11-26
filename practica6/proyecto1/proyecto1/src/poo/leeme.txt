@@ -1,0 +1,48 @@
+curso:
+    curso
+    nombre
+    CupoMaximo
+    lista matriculas
+    lista horarios
+    metodo inscribir que pide estudiante y devuelve matricula
+
+persona:
+    nombre
+    dni
+    fecha nacimiento
+    edad
+    direccion
+    metodo getEdad que no pide nada y devuelve int
+
+matricula:
+    fecha
+    notaFinal
+    metodo calcularNotaFinal que no pide nada y devuelve double
+
+profesor extiende persona:
+    sueldo
+    curso
+    metodo asignarCurso que pide curso y devuelve nada
+
+estudiante extiende persona:
+    esRepetidor
+    lista matriculas
+    metodo inscribir que pide curso y devuelve matricula
+
+direccion:
+    calle
+    numero
+    ciudad
+
+horario:
+    diaDeLaSemana
+    fechaInicio
+    fechaFinal
+
+departamento:
+    nombre
+    Listado Cursos
+
+Universidad:
+    nombre
+    Listado departamentos

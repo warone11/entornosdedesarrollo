@@ -1,16 +1,23 @@
 package poo;
 public class Main {
     public static void main(String[] args){
-        PersonaPOO persona1 = new PersonaPOO("Mbappe", 26,"","","","","","",0);
-        
-        persona1.mostrarInformacion();
-        System.out.println("Para la persona 1 sabemos que tiene "+ persona1.getEdad()+" edad");
-        persona1.setApellidos("hola");
-        System.out.println(persona1.getApellidos());
-        biblioteca biblioteca1 = new biblioteca("Papel", "Calle falsa 123", 9, 22);
-        biblioteca1.estaAbierta(23);
-        biblioteca1.esExtranjera("ingles");
-        biblioteca1.informacion();
+      String text="aA aAaAaaaaA";
+        text=text.toLowerCase();
+      String text2="";
+      for(int i=0; i<text.length();i++){
+        if(text.charAt(i)>=97&&text.charAt(i)<=122){
+          if(i!=0){
+            text2+=" ";
+          }
+          text2+=getAlfabetPos(text.charAt(i))+"";
+        }
+      }
+      System.out.println(text2);
+
 
     }
+    public static int getAlfabetPos(char char1){
+      return (int)(char1);
+    }
+    
 }
